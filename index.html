@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026년 나의 유성고</title>
+  <style>
+    :root {
+      --blue-900: #0b2a5b;
+      --blue-700: #1556b8;
+      --blue-500: #2f80ed;
+      --blue-100: #e3efff;
+      --blue-50: #f3f8ff;
+      --text: #14233c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: var(--blue-50);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--blue-900), var(--blue-500));
+      color: #fff;
+      text-align: center;
+      padding: 56px 20px 48px;
+    }
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+    header p {
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: 0.92;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 36px 20px 56px;
+    }
+    h2 {
+      margin: 0 0 20px;
+      color: var(--blue-900);
+      font-size: 1.3rem;
+      border-left: 5px solid var(--blue-500);
+      padding-left: 12px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      display: block;
+      background: #fff;
+      border: 1px solid var(--blue-100);
+      border-radius: 16px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(21, 86, 184, 0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(21, 86, 184, 0.18);
+      outline: none;
+    }
+    .card-multi {
+      background: #fff;
+      border: 1px solid var(--blue-100);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 2px 8px rgba(21, 86, 184, 0.08);
+    }
+    .num {
+      display: inline-block;
+      background: var(--blue-100);
+      color: var(--blue-700);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .card h3, .card-multi h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      color: var(--blue-900);
+    }
+    .card p, .card-multi p {
+      margin: 0 0 14px;
+      font-size: 0.92rem;
+      color: #4a5d7a;
+    }
+    .open {
+      color: var(--blue-700);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      flex: 1;
+      min-width: 110px;
+      text-align: center;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--blue-100);
+      color: var(--blue-700);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .btn:hover, .btn:focus-visible {
+      background: var(--blue-700);
+      color: #fff;
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #5b6f8f;
+      border-top: 1px solid var(--blue-100);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>2026년 나의 유성고</h1>
+    <p>2026년 1학년의 활동을 모아놓은 페이지</p>
+  </header>
+
+  <main>
+    <h2>활동 작품</h2>
+    <div class="cards">
+
+      <a class="card" href="pdf/pokemon-data-analysis-report.pdf" target="_blank" rel="noopener">
+        <span class="num">작품 1</span>
+        <h3>포켓몬 데이터 분석</h3>
+        <p>CODAP으로 타입별 스탯의 특징을 분석했어요.</p>
+        <span class="open">PDF 열기 →</span>
+      </a>
+
+      <div class="card-multi">
+        <span class="num">작품 2</span>
+        <h3>유성고 데우이 프로젝트</h3>
+        <p>설문 분석 보고서와 직접 만든 알림 앱 발표 자료예요.</p>
+        <div class="btns">
+          <a class="btn" href="pdf/school-survey-data-story-group-report.pdf" target="_blank" rel="noopener">PDF 열기</a>
+          <a class="btn" href="pdf/yuseong-school-notice-app.pptx" download>PPT 받기</a>
+        </div>
+      </div>
+
+      <a class="card" href="pdf/linear-regression-kbo-war-salary.pdf" target="_blank" rel="noopener">
+        <span class="num">작품 3</span>
+        <h3>선형회귀 탐구</h3>
+        <p>Orange3로 KBO 선수의 WAR과 연봉 관계를 살펴봤어요.</p>
+        <span class="open">PDF 열기 →</span>
+      </a>
+
+      <a class="card" href="pdf/public-data-export-ranking-visualization.pdf" target="_blank" rel="noopener">
+        <span class="num">작품 4</span>
+        <h3>공공데이터 레이싱 차트</h3>
+        <p>Flourish로 5개국 수출액 순위 변화를 그렸어요.</p>
+        <span class="open">PDF 열기 →</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>© 2026 나의 유성고</footer>
+</body>
+</html>
+  <footer>© 2026 나의 유성고</footer>
+</body>
+</html>
